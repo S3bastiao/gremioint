@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel do Grêmio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Figtree:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap">
+<link rel="preload" as="image" href="../img/djamila-hero.webp">
+<link rel="stylesheet" href="../css/gremio.css">
+</head>
+<body>
+<a class="skip" href="#view">Pular para o conteúdo</a>
+
+<!-- Login -->
+<div class="login" id="login">
+  <div class="stage" aria-hidden="true">
+    <span class="mega">GRÊMIO</span>
+    <img class="retrato" src="../img/djamila-hero.webp" alt="" width="806" height="954" fetchpriority="high">
+    <div class="chapa"><span class="hex"></span>Chapa Djamila Ribeiro</div>
+    <div class="assina"><b>todas as vozes</b><small>Uma escola se constrói com todas as vozes.</small></div>
+    <div class="favos"><div class="favo"><img src="../img/djamila-02.webp" alt="" loading="lazy"></div><div class="favo"><img src="../img/djamila-03.webp" alt="" loading="lazy"></div></div>
+  </div>
+  <form class="login-card" id="loginForm" novalidate>
+    <div class="brand"><span class="hex" aria-hidden="true"></span>Grêmio</div>
+    <h1>Painel interno</h1>
+    <p class="lead">Entre com o e-mail e a senha que a presidência liberou para você.</p>
+    <div class="alert" id="loginErro" role="alert"></div>
+    <div class="field"><label for="email">E-mail</label><input id="email" type="email" autocomplete="username" required></div>
+    <div class="field"><label for="senha">Senha</label><input id="senha" type="password" autocomplete="current-password" required></div>
+    <button class="btn" type="submit" id="loginBtn">Entrar</button>
+  </form>
+</div>
+
+<!-- Painel -->
+<div class="app" id="app">
+  <aside class="side">
+    <div class="brand"><span class="hex" aria-hidden="true"></span>Grêmio</div>
+    <nav class="nav" id="nav" aria-label="Módulos"></nav>
+    <div class="foot">
+      <span>Conectado como</span><b id="quem"></b>
+      <div class="row">
+        <button class="btn o sm" id="temaBtn" type="button">Tema</button>
+        <button class="btn o sm" id="sairBtn" type="button">Sair</button>
+      </div>
+    </div>
+  </aside>
+  <div class="main-wrap">
+    <div class="top">
+      <div><label for="ano">Ano letivo</label><select id="ano"></select></div>
+    </div>
+    <main id="view" tabindex="-1"></main>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="core.js"></script>
+<script src="social.js"></script>
+<script src="infra.js"></script>
+<script src="tesouraria.js"></script>
+<script src="mulher.js"></script>
+<script src="esporte.js"></script>
+<script src="membros.js"></script>
+<script src="monitoria.js"></script>
+<script src="efeitos.js"></script>
+</body>
+</html>
